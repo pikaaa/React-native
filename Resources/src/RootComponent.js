@@ -10,11 +10,14 @@ import * as actions from '../actions';
 import ComingSoonCardList from '../components/ComingSoonCardList';
 
 class RootComponent extends Component {
+  static navigationOptions = {
+    title: 'Coming Soon',
+  };
 
   componentDidMount() {
     this.fetchInitialData();
     console.log('ROOTCOMPONENT::::');
-    console.log(this.props);
+    console.log( );
   }
   //API CALLS
   fetchInitialData = () => {
@@ -36,7 +39,7 @@ class RootComponent extends Component {
   handleResponse = (response) => {
     console.log('=====received response=====');
     console.log(response);
-    console.log('=====received props=====');
+    console.log('=====received props in rootcomponent=====');
     console.log(this.props);
 
     this.props.loadData(response.Events.length, response.Events);

@@ -7,12 +7,12 @@ class Synopsis extends Component {
   };
 
   navigateToSynopsisDetails = () => {
-    console.log('====Details===');
-    console.log(this.props);
+
     this.props.navigation.navigate('SynopsisDetails');
   }
   render() {
-    console.log();
+    console.log('====Details===');
+    console.log(this.props);
     return (
       <TouchableHighlight onPress={this.navigateToSynopsisDetails}>
       <View>

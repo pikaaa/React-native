@@ -12,7 +12,7 @@ class ComingSoonCardList extends Component {
   navigateToSynopsis = () => {
     console.log('pressed pressed');
     console.log(this.props);
-    this.props.cmnSoonReducer.navigation.navigation.navigate('Synopsis');
+    this.props.cmnSoonReducer.navigation.navigate('Synopsis');
     console.log(this.props);
   }
 

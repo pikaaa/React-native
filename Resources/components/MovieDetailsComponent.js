@@ -7,11 +7,8 @@ import {
 
 export default class MovieDetailsComponent extends Component {
   renderGenre = (genreArr) => {
-    console.log('===genreArr===');
-    console.log(genreArr);
     if (genreArr !== undefined) {
     return (genreArr.map(genre => {
-        console.log(genre);
         return (<Text style={styles.genre}> {genre} </Text>);
       }
   ));
@@ -19,8 +16,7 @@ export default class MovieDetailsComponent extends Component {
   }
 
   render() {
-    console.log('===MovieDetailsComponent====');
-    console.log(this.props);
+
     const item = this.props.item;
     return (
       <View style={styles.container}>
@@ -36,7 +32,7 @@ export default class MovieDetailsComponent extends Component {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create( {
   container: {
     flexDirection: 'column',
     margin: 8,

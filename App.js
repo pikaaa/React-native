@@ -14,26 +14,26 @@ import Details from './Resources/src/Details';
 // import ComingSoonCardList from './Resources/components/ComingSoonCardList';
 import reducers from './Resources/reducers';
 
+const MainScreen = StackNavigator( {
+  Home: { screen: RootComponent },
+  Synopsis: { screen: Synopsis },
+  SynopsisDetails: { screen: Details },
+} );
+
 class App extends Component {
-
-  static navigationOptions = {
-      title: 'Coming Soon',
-  };
-
+  
   render() {
     console.log('In App::::');
     console.log(this.props);
     return (
-      <Provider store={createStore(reducers)} >
-        <RootComponent navigation={this.props} />
+      <Provider store={ createStore( reducers ) } >
+        <MainScreen />
       </Provider>
     );
   }
 }
+
 // const mapStateToProps = state => state;
-const MainScreen = StackNavigator({
-  Home: { screen: App },
-  Synopsis: { screen: Synopsis, },
-  SynopsisDetails: { screen: Details }
-});
-export default MainScreen;
+
+
+export default App;
