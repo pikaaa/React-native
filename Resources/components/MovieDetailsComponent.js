@@ -6,13 +6,13 @@ import {
 } from 'react-native';
 
 export default class MovieDetailsComponent extends Component {
-  renderGenre = (genreArr) => {
+  renderGenre = ( genreArr ) => {
     if (genreArr !== undefined) {
-    return (genreArr.map(genre => {
-        return (<Text style={styles.genre}> {genre} </Text>);
-      }
-  ));
-  }
+      return ( genreArr.map( ( genre ) => {
+        return ( <Text style={ styles.genre }> { genre } </Text> );
+      },
+    ) );
+    }
   }
 
   render() {
@@ -37,7 +37,7 @@ const styles = StyleSheet.create( {
     flexDirection: 'column',
     margin: 8,
     flex: 1,
-    justifyContent: 'space-around'
+    justifyContent: 'space-around',
   },
   actors: {
     marginRight: 8,
@@ -50,6 +50,6 @@ const styles = StyleSheet.create( {
     borderColor: '#eeeeee',
     borderRadius: 8,
     borderWidth: 1,
-    marginRight: 5
-  }
-});
+    marginRight: 5,
+  },
+} );

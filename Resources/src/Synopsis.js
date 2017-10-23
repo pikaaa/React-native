@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View, TouchableHighlight } from 'react-native';
+import { connect } from 'react-redux';
 
 class Synopsis extends Component {
   static navigationOptions = {
@@ -7,21 +8,18 @@ class Synopsis extends Component {
   };
 
   navigateToSynopsisDetails = () => {
-
     this.props.navigation.navigate('SynopsisDetails');
   }
   render() {
-    console.log('====Details===');
-    console.log(this.props);
     return (
-      <TouchableHighlight onPress={this.navigateToSynopsisDetails}>
-      <View>
-      <Text> 'Its Synopsis' </Text>
-      <Text> 'hdhkhdlxhshdhsdjkhjhshhshsh'</Text>
-      </View>
+      <TouchableHighlight onPress={ this.navigateToSynopsisDetails }>
+        <View>
+          <Text> 'Its Synopsis' </Text>
+        </View>
       </TouchableHighlight>
     );
   }
 }
 
-export default Synopsis;
+const mapStateToProps = state => state;
+export default connect( mapStateToProps )( Synopsis );

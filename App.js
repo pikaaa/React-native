@@ -10,8 +10,6 @@ import React, { Component } from 'react';
 import RootComponent from './Resources/src/RootComponent';
 import Synopsis from './Resources/src/Synopsis';
 import Details from './Resources/src/Details';
-// import * as actions from './Resources/actions';
-// import ComingSoonCardList from './Resources/components/ComingSoonCardList';
 import reducers from './Resources/reducers';
 
 const MainScreen = StackNavigator( {
@@ -20,20 +18,10 @@ const MainScreen = StackNavigator( {
   SynopsisDetails: { screen: Details },
 } );
 
-class App extends Component {
-  
-  render() {
-    console.log('In App::::');
-    console.log(this.props);
-    return (
-      <Provider store={ createStore( reducers ) } >
-        <MainScreen />
-      </Provider>
-    );
-  }
-}
-
-// const mapStateToProps = state => state;
-
+const App = () => (
+  <Provider store={ createStore( reducers ) } >
+    < MainScreen />
+  </Provider>
+  );
 
 export default App;

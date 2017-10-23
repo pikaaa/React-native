@@ -5,27 +5,25 @@ import * as actions from '../actions';
 import ComingSoonCard from './ComingSoonCard';
 
 class ComingSoonCardList extends Component {
-  setNativeProps(nativeProps) {
-    this.root.setNativeProps(nativeProps);
+  setNativeProps( nativeProps ) {
+    this.root.setNativeProps( nativeProps );
   }
 
   navigateToSynopsis = () => {
-    console.log('pressed pressed');
+    console.log('Navigating to synopsis-----');
     console.log(this.props);
-    this.props.cmnSoonReducer.navigation.navigate('Synopsis');
+    this.props.cmnSoonReducer.navigation.navigate( 'Synopsis' );
+    console.log('Navigated to synopsis-----');
     console.log(this.props);
   }
 
-  renderCard = ({ item, index }) => {
-    console.log('===cardList===');
-    return (
-      <TouchableHighlight onPress={this.navigateToSynopsis}>
-      <View ref={component => (this.root = component)} >
-        <ComingSoonCard item={item} index={index} />
+  renderCard = ( { item, index } ) => (
+    <TouchableHighlight onPress={ this.navigateToSynopsis }>
+      <View ref={ component => ( this.root = component ) } >
+        <ComingSoonCard item={ item } index={ index } />
       </View>
-      </TouchableHighlight>
-  );
-}
+    </TouchableHighlight>
+    );
 
   render() {
     console.log('=====inside ComingSoonCardList====');
