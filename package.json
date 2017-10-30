@@ -8,18 +8,20 @@
     "flow": "flow"
   },
   "dependencies": {
+    "babel-preset-react-native": "2.1.0",
     "es6-promise": "^4.1.1",
     "isomorphic-fetch": "^2.2.1",
     "react": "16.0.0-beta.5",
     "react-native": "0.49.3",
+    "react-native-extended-stylesheet": "^0.7.0",
     "react-navigation": "^1.0.0-beta.15",
     "react-redux": "^5.0.6",
+    "react-scripts": "^1.0.14",
     "redux": "^3.7.2"
   },
   "devDependencies": {
-    "babel-jest": "21.2.0",
-    "babel-preset-react-native": "2.1.0",
     "babel-eslint": "^7.2.3",
+    "babel-jest": "21.2.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.2",
     "eslint-plugin-flowtype": "^2.35.1",

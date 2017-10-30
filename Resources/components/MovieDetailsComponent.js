@@ -7,12 +7,12 @@ import {
 
 export default class MovieDetailsComponent extends Component {
   renderGenre = ( genreArr ) => {
-    if (genreArr !== undefined) {
+    if ( genreArr !== undefined ) {
       return ( genreArr.map( ( genre ) => {
         return ( <Text style={ styles.genre }> { genre } </Text> );
       },
     ) );
-    }
+  }
   }
 
   render() {

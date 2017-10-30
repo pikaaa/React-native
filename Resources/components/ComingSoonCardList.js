@@ -10,11 +10,10 @@ class ComingSoonCardList extends Component {
   }
 
   navigateToSynopsis = () => {
-    console.log('Navigating to synopsis-----');
-    console.log(this.props);
-    this.props.cmnSoonReducer.navigation.navigate( 'Synopsis' );
-    console.log('Navigated to synopsis-----');
-    console.log(this.props);
+    // console.log('Navigating to synopsis-----');
+    // console.log(this.props);
+    const props = this.props;
+    props.cmnSoonReducer.navigation.navigate( 'Synopsis' );
   }
 
   renderCard = ( { item, index } ) => (
@@ -26,25 +25,25 @@ class ComingSoonCardList extends Component {
     );
 
   render() {
-    console.log('=====inside ComingSoonCardList====');
-    console.log(this.props.cmnSoonReducer.total);
+    // console.log('=====inside ComingSoonCardList====');
+    // console.log(this.props.cmnSoonReducer.total);
 
     return (
       <FlatList
-        style={styles.container}
-        data={this.props.cmnSoonReducer.data}
-        keyExtractor={(item, index) => index}
+        style={ styles.container }
+        data={ this.props.cmnSoonReducer.data }
+        keyExtractor={ ( item, index ) => index }
         renderItem={this.renderCard}
       />
     );
   }
 }
-const styles = StyleSheet.create({
+const styles = StyleSheet.create( {
   container: {
     flex: 1,
-    backgroundColor: '#eeeeee'
-  }
-});
+    backgroundColor: '#eeeeee',
+  },
+} );
 const mapStateToProps = state => state;
 
-export default connect(mapStateToProps, actions)(ComingSoonCardList);
+export default connect( mapStateToProps, actions )( ComingSoonCardList );
